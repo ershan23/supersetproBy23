@@ -33,6 +33,7 @@ import RoseChartPlugin from '@superset-ui/legacy-plugin-chart-rose';
 import TableChartPlugin from '@superset-ui/plugin-chart-table';
 import { WordCloudChartPlugin } from '@superset-ui/plugin-chart-word-cloud';
 import WorldMapChartPlugin from '@superset-ui/legacy-plugin-chart-world-map';
+import { MyBarChartPlugin } from '@superset-ui/plugin-chart-my-bar';
 import {
   BubbleChartPlugin,
   BulletChartPlugin,
@@ -195,6 +196,7 @@ export default class MainPreset extends Preset {
         new EchartsTreeChartPlugin().configure({ key: VizType.Tree }),
         new EchartsSunburstChartPlugin().configure({ key: VizType.Sunburst }),
         new HandlebarsChartPlugin().configure({ key: VizType.Handlebars }),
+        new MyBarChartPlugin().configure({ key: 'my_bar_chart' }),
         new EchartsBubbleChartPlugin().configure({ key: VizType.Bubble }),
         new CartodiagramPlugin({
           defaultLayers: [

@@ -463,6 +463,7 @@ const config = {
       path.resolve(APP_DIR, 'packages'),
       path.resolve(APP_DIR, 'plugins'),
     ],
+    fullySpecified: false,
     alias: {
       '@storybook-shared': path.resolve(APP_DIR, '.storybook/shared'),
       react: path.resolve(path.join(APP_DIR, './node_modules/react')),
@@ -504,6 +505,7 @@ const config = {
       },
       {
         test: /node_modules\/(geostyler|geostyler-openlayers-parser|geostyler-mapbox-parser|geostyler-sld-parser)\/.*\.js$/,
+        type: 'javascript/auto',
         resolve: {
           fullySpecified: false,
         },
